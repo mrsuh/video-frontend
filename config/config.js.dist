@@ -1,0 +1,6 @@
+app.constant('config', {
+    main_host: '11',
+    resource_urls: {
+        main: '1111'
+    }
+});

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <base href="/">
+    <meta charset="utf-8">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="config/config.js"></script>
+    <script src="config/router.js"></script>
+
+    <script src="js/controller/main/main.js"></script>
+    <script src="js/controller/error/error.js"></script>
+    <script src="js/controller/common.js"></script>
+
+
+    <script src="js/directives/scroll.js"></script>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .fixed_header{
+            top:0px;
+            position:fixed;
+        }
+        .fixed_body{
+            padding-top: 200px;
+        }
+        .header{
+            height: 200px;
+            width: 100%;
+            background-color: #1b6d85;
+        }
+    </style>
+
+</head>
+<body>
+
+<div ng-app="app">
+    <div ui-view></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "angular-scelet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
+    "angular-resource": "^1.4.9",
+    "angular-ui-router": "^0.2.17",
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsuh/angular-scelet.git"
+  },
+  "author": "Sukhachev Anton mrsuh6@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrsuh/angular-scelet/issues"
+  },
+  "homepage": "https://github.com/mrsuh/angular-scelet#readme"
+}

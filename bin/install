@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd "$( cd `dirname $0` && pwd )/.."
+
+if [ -e "config/config.js.dist" ] ; then
+    cp config/config.js.dist config/config.js
+    echo "Config created from config.js.dist"
+fi
+
+npm install
