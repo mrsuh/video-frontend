@@ -19,114 +19,15 @@
     <script src="js/controller/main/film.js"></script>
 
     <script src="js/directives/scroll.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            background-color: #f6f6f6;
-            box-sizing: border-box;
-            font-family: "Titillium",Arial,sans-serif;
-
-        }
-
-        .header{
-            top:0;
-            /*position: fixed;*/
-            height: 50px;
-            line-height: 50px;
-            color: white;
-            width: 100%;
-            background-color: #3b8dbd;
-        }
-
-        .footer{
-            bottom:0;
-            height: 200px;
-            width: 100%;
-            background-color: #3b8dbd;
-            margin-top: 5px;
-        }
-        .width{
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .divider{
-            color: white;
-            line-height: 50px;
-            height: 50px;
-            width: 100%;
-            background-color: #3b8dbd;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .video{
-            /*margin-top: 50px;*/
-            /*background-color: black;*/
-            height: 450px;
-        }
-
-        .video-main{
-            height: 100%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .fresh{
-            width: 80%;
-            font-size: 0;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .fresh-block{
-            width: 25%;
-            min-width: 200px;
-            height: 200px;
-            display: inline-block;
-            padding: 2px;
-            box-sizing: border-box;
-        }
-        .fresh-block:hover{
-            opacity: 0.8;
-        }
-
-        .video-small{
-            background-color: #1b6d85;
-            width: 100%;
-            height: 100%;
-            padding: 2px;
-            box-sizing: border-box;
-        }
-        .video-small img{
-            display: block;
-            width: 100%;
-            margin-bottom: 5px;
-        }
-        .video-small span{
-            display: block;
-            font-size: 14px;
-            color: white;
-        }
-        .description {
-            min-height: 500px;
-        }
-        .full-length {
-            min-height: 500px;
-        }
-        .series {
-            min-height: 500px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style/css/layout.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style/css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style/css/film.css" media="screen" />
 
 </head>
 <body>
 
 <div ng-app="app">
-    <div ui-view></div>
+    <div ui-view class="width"></div>
 </div>
 </body>
 </html>

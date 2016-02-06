@@ -1,0 +1,27 @@
+.fresh{
+    background-color: #ffffff;
+}
+
+.video{
+    font-size: 0;
+}
+
+.video .video-player{
+    width: 60%;
+    height: 450px;
+    display: inline-block;
+}
+.video .video-description{
+    width: 20%;
+    background-color: black;
+    display: inline-block;
+    height: 450px;
+}
+
+.full-length {
+    min-height: 500px;
+}
+
+.series {
+    min-height: 500px;
+}

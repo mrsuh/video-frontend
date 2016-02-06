@@ -11,13 +11,13 @@ $scope.video = false;
     };
 
     $scope.list_fresh =[];
-    for(var i=0; i<8; i++){
+    for(var i=1; i<=10; i++){
         $scope.list_fresh.push(single);
     }
 
     $scope.video = {
         name: 'name',
-        src: $sce.trustAsResourceUrl('video/fem.mp4'),
+        src: $sce.trustAsResourceUrl('video/meg.mp4'),
         poster: $sce.trustAsResourceUrl('img/img.jpg')
     };
 

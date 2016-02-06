@@ -1,38 +1,34 @@
 <div class="video">
-    <video ng-if="video" class="video-main" preload="none" controls="controls"
-           poster="{{video.poster}}" ng-src="{{video.src}}" type="video/mp4">
+    <div class="main video-player">
+        <video ng-if="video" class="video-main" preload="none" controls="controls"
+               poster="{{video.poster}}" ng-src="{{video.src}}" type="video/mp4">
 
-        <img ng-src="{{video.poster}}" alt="">
-        <div>Устройство не поддерживает воспроизведение встроенного видео</div>
-    </video>
-</div>
-<div class="divider">
-    <div class="width">
-    Новое
-        </div>
-</div>
-<div class="fresh">
-        <a href="" ui-sref="film({film_name: f.id_film, series: f.id_season})" class="fresh-block" ng-repeat="f in list_fresh track by $index">
-            <div class="video-small">
-                <img ng-src="{{f.poster}}">
-                <span>{{f.film}}</span>
-                <span>{{f.season}}</span>
-                <span>{{f.name}}</span>
-            </div>
-        </a>
-</div>
-<div class="divider">
-    <div class="width">
-        Самое популярное
+            <img ng-src="{{video.poster}}" alt="">
+            <div>Устройство не поддерживает воспроизведение встроенного видео</div>
+        </video>
     </div>
 </div>
-<div class="fresh">
-    <a href="" class="fresh-block" ng-repeat="f in list_fresh track by $index">
-        <div class="video-small">
-            <img ng-src="{{f.poster}}">
-            <span>{{f.film}}</span>
-            <span>{{f.season}}</span>
-            <span>{{f.name}}</span>
+
+
+<div class="main-list">
+    <div class="width-inner">
+
+        <div class="popular"></div>
+
+        <div class="new">
+            <span>Новое</span>
+            <a href="" ui-sref="film({film_name: f.id_film, series: f.id_season})" class="block" ng-repeat="f in list_fresh track by $index">
+                <img ng-src="{{f.poster}}">
+                <div class="description">
+                    <span>{{f.film}}</span>
+                    <span>{{f.season}}</span>
+                    <span>{{f.name}}</span>
+                </div>
+            </a>
         </div>
-    </a>
+
+        <div class="popular"></div>
+
+    </div>
 </div>
+
