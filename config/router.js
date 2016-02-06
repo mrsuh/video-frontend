@@ -21,9 +21,23 @@ var router = function ($stateProvider, $urlRouterProvider, $locationProvider) {
         })
 
         .state('main', {
-            url        : "/main",
+            url        : "",
             controller : 'MainController',
             templateUrl: "html/main.html",
+            parent  : 'common'
+        })
+
+        .state('list', {
+            url        : "/list",
+            controller : 'ListController',
+            templateUrl: "html/list.html",
+            parent  : 'common'
+        })
+
+        .state('film', {
+            url        : "/film/:film_name/:series",
+            controller : 'FilmController',
+            templateUrl: "html/film.html",
             parent  : 'common'
         })
 

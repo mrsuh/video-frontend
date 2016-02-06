@@ -1,1 +1,38 @@
-HELLO {{name}}
+<div class="video">
+    <video ng-if="video" class="video-main" preload="none" controls="controls"
+           poster="{{video.poster}}" ng-src="{{video.src}}" type="video/mp4">
+
+        <img ng-src="{{video.poster}}" alt="">
+        <div>Устройство не поддерживает воспроизведение встроенного видео</div>
+    </video>
+</div>
+<div class="divider">
+    <div class="width">
+    Новое
+        </div>
+</div>
+<div class="fresh">
+        <a href="" ui-sref="film({film_name: f.id_film, series: f.id_season})" class="fresh-block" ng-repeat="f in list_fresh track by $index">
+            <div class="video-small">
+                <img ng-src="{{f.poster}}">
+                <span>{{f.film}}</span>
+                <span>{{f.season}}</span>
+                <span>{{f.name}}</span>
+            </div>
+        </a>
+</div>
+<div class="divider">
+    <div class="width">
+        Самое популярное
+    </div>
+</div>
+<div class="fresh">
+    <a href="" class="fresh-block" ng-repeat="f in list_fresh track by $index">
+        <div class="video-small">
+            <img ng-src="{{f.poster}}">
+            <span>{{f.film}}</span>
+            <span>{{f.season}}</span>
+            <span>{{f.name}}</span>
+        </div>
+    </a>
+</div>
