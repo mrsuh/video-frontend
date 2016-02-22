@@ -1,68 +1,58 @@
-.video .main.video-player{
-    width: 100%;
-    height: 450px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.video-main{
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.main-list{
-    padding-top: 10px;
-    background-color: #ffffff;
-    font-size: 0;
-    display: inline-block;
-    width: 100%;
-}
-.main-list span{
-    display: block;
-    font-size: 24px;
-}
-
-.main-list .block{
-    width: 33.3%;
-    min-width: 200px;
-    height: 200px;
-    display: inline-block;
-    padding: 2px;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: #484848;
-    margin-bottom: 10px;
-}
-
-.main-list .block:hover{
-    opacity: 0.8;
-}
-
-.main-list .block img{
-    display: block;
-    height: auto;
-    width: 250px;
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.main-list .block span{
-    display: block;
-    font-size: 14px;
-}
-
-.popular{
-    vertical-align: top;
-    width: 20%;
+.container{
     height: 500px;
-    background-color: #484848;
-    display: inline-block;
+    background: #ddd;
+    transition: background 0.5s ease;
 }
 
-.new{
-    vertical-align: top;
-    width: 60%;
+.jake{
+    background: url('/img/jake.png');
+}
+
+.line{
+    padding-top: 100px;
+    width: 100%;
+    font-size: 0;
+}
+
+.line .left{
     display: inline-block;
+    width: 50%;
+    height: 40px;
+}
+
+.line .right{
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+}
+
+.line .left .content{
+    height: 40px;
+    background-color: #f8c128;
+    float: right;
+    font-size: 16px;
+    cursor: default;
+    line-height: 40px;
+    text-align: right;
+    transition: width 0.5s ease-out 0s;
+    width: 140px;
+}
+
+.line .left .content:hover{
+    width: 300px;
+    transition: width ease-out 0.5s;
+}
+
+.line .right .content{
+    height: 40px;
+    background-color: #3e8f3e;
+    width: 100px;
+    float: left;
+    transition: width ease-out 0.5s;
+}
+
+.line .right .content:hover{
+    width: 300px;
+    transition: width ease-out 0.5s;
 }

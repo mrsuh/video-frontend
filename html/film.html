@@ -1,52 +1,49 @@
-<div class="video">
-    <div class="video-description"></div>
-    <div class="video-player">
+
+    <div class="video">
         <video ng-if="video" class="video-main" preload="none" controls="controls"
                poster="{{video.poster}}" ng-src="{{video.src}}" type="video/mp4">
 
             <img ng-src="{{video.poster}}" alt="">
-
             <div>Устройство не поддерживает воспроизведение встроенного видео</div>
         </video>
     </div>
-    <div class="video-description"></div>
-</div>
 
-<div class="divider">
-    <div class="width-inner">
-        <a href ng-click="changeShow('description')" ng-init="show.description = true">Описание</a>
-        <a href ng-click="changeShow('series')">Серии</a>
-        <a href ng-click="changeShow('full_length')">Полный метр</a>
-    </div>
-</div>
 
-<div class="description" ng-show="show.description">
-    <div class="width-inner">
-        Описание
-    </div>
-</div>
-<div class="series" ng-show="show.series">
+<!--<div class="divider">-->
+    <!--<div class="width-inner">-->
+        <!--<a href ng-click="changeShow('description')" ng-init="show.description = true">Описание</a>-->
+        <!--<a href ng-click="changeShow('series')">Серии</a>-->
+        <!--<a href ng-click="changeShow('full_length')">Полный метр</a>-->
+    <!--</div>-->
+<!--</div>-->
 
-    <div class="divider">
-        <div class="width">
-            Сезон
-            <select id="select_season" ng-options="s for s in seasons" ng-model="current_season"></select>
-        </div>
-    </div>
+<!--<div class="description" ng-show="show.description">-->
+    <!--<div class="width-inner">-->
+        <!--Описание-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="series" ng-show="show.series">-->
 
-    <div class="fresh">
-        <a href="" class="fresh-block" ng-repeat="f in list[current_season] track by $index">
-            <div class="video-small" ng-click="changeVideo(f)">
-                <img ng-src="{{f.poster}}">
-                <span>{{f.film}}</span>
-                <span>{{f.name}}</span>
-            </div>
-        </a>
-    </div>
+    <!--<div class="divider">-->
+        <!--<div class="width">-->
+            <!--Сезон-->
+            <!--<select id="select_season" ng-options="s for s in seasons" ng-model="current_season"></select>-->
+        <!--</div>-->
+    <!--</div>-->
 
-</div>
-<div class="full-length" ng-show="show.full_length">
-    <div class="width">
-        Полный метр
-    </div>
-</div>
+    <!--<div class="fresh">-->
+        <!--<a href="" class="fresh-block" ng-repeat="f in list[current_season] track by $index">-->
+            <!--<div class="video-small" ng-click="changeVideo(f)">-->
+                <!--<img ng-src="{{f.poster}}">-->
+                <!--<span>{{f.film}}</span>-->
+                <!--<span>{{f.name}}</span>-->
+            <!--</div>-->
+        <!--</a>-->
+    <!--</div>-->
+
+<!--</div>-->
+<!--<div class="full-length" ng-show="show.full_length">-->
+    <!--<div class="width">-->
+        <!--Полный метр-->
+    <!--</div>-->
+<!--</div>-->

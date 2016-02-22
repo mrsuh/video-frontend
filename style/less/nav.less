@@ -1,0 +1,137 @@
+@block-height: 60px;
+@block-color: #3366ff;
+@color-bmo: #63BDA4;
+@color-fin: #FFFFFF;
+@color-jake: #F8C129;
+@color-bubblegum: #FE66CB;
+@color-pbk: #CD93F9;
+@color-marci: #050A1E;
+.nav{
+  padding-top: 100px;
+  width: 100%;
+  height: 300px;
+  background-color: inherit;
+  transition: background-color 0.5s ease-in-out;
+
+  .line{
+    width: 100%;
+    font-size: 0;
+    .left{
+      display: inline-block;
+      width: 50%;
+      .block{
+        background-color: @block-color;
+        margin: 10px 10% 10px 30%;
+        height: @block-height;
+        text-align: right;
+        line-height: @block-height;
+        img{
+          height: @block-height;
+          width: auto;
+          float: right;
+        }
+        span{
+          font-size: 14px;
+          color: #FFFFFF;
+        }
+      }
+      .marci{
+        background-color: @color-marci;
+      }
+      .booblegum{
+        background-color: @color-bubblegum;
+      }
+      .fin{
+        background-color: @color-fin;
+      }
+      .pbk{
+        background-color: @color-pbk;
+      }
+      .jake{
+        background-color: @color-jake;
+      }
+      .bmo{
+        background-color: @color-bmo;
+      }
+    }
+
+    .right{
+      display: inline-block;
+      width: 50%;
+      .block{
+        background-color: @block-color;
+        margin: 10px 30% 10px 10%;
+        height: @block-height;
+        text-align: left;
+        line-height: @block-height;
+        img{
+          height: @block-height;
+          width: auto;
+          float: left;
+        }
+        span{
+          font-size: 14px;
+          color: #FFFFFF;
+        }
+      }
+      .marci{
+        background-color: @color-marci;
+      }
+      .booblegum{
+        background-color: @color-bubblegum;
+      }
+      .fin{
+        background-color: @color-fin;
+      }
+      .pbk{
+        background-color: @color-pbk;
+      }
+      .jake{
+        background-color: @color-jake;
+      }
+      .bmo{
+        background-color: @color-bmo;
+      }
+    }
+  }
+}
+.nav.marci{
+  background-color: @color-marci;
+  opacity: 0.9;
+}
+
+.nav.collapsed{
+  padding-top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #1b6d85;
+  .line{
+    height: 0;
+    .left{
+      .block{
+        height: 0;
+        img{
+          opacity: 0;
+        }
+        span{
+          opacity: 0;
+        }
+      }
+    }
+    .right{
+      .block{
+        height: 0;
+        img{
+          opacity: 0;
+        }
+        span{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.nav.collapsed:hover + .line + .left + .block{
+  height: @block-height;
+}

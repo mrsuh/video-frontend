@@ -2,7 +2,8 @@ var HeaderController = function ($rootScope, $scope, $state, $stateParams, confi
 
     $scope.scrollfixed = function(elem) {
         console.info(elem);
-    }
+    };
+
 
 };
 

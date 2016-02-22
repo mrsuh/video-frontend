@@ -1,34 +1,46 @@
-<div class="video">
-    <div class="main video-player">
-        <video ng-if="video" class="video-main" preload="none" controls="controls"
-               poster="{{video.poster}}" ng-src="{{video.src}}" type="video/mp4">
-
-            <img ng-src="{{video.poster}}" alt="">
-            <div>Устройство не поддерживает воспроизведение встроенного видео</div>
-        </video>
-    </div>
-</div>
-
-
-<div class="main-list">
-    <div class="width-inner">
-
-        <div class="popular"></div>
-
-        <div class="new">
-            <span>Новое</span>
-            <a href="" ui-sref="film({film_name: f.id_film, series: f.id_season})" class="block" ng-repeat="f in list_fresh track by $index">
-                <img ng-src="{{f.poster}}">
-                <div class="description">
-                    <span>{{f.film}}</span>
-                    <span>{{f.season}}</span>
-                    <span>{{f.name}}</span>
-                </div>
-            </a>
+<div class="nav collapsed" ng-class="{'marci': marci}">
+    <div class="line">
+        <div class="left">
+            <div class="block marci" ng-mouseover="marci=!marci" ng-mouseleave="marci=!marci" ng-init="marci=false">
+                <span>текст</span>
+                <img src="/img/marci.jpg">
+            </div>
         </div>
-
-        <div class="popular"></div>
-
+        <div class="right">
+            <div class="block fin">
+                <img src="/img/fin.jpg">
+                <span>текст</span>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+        <div class="left">
+            <div class="block pbk">
+                <span>текст</span>
+                <img src="/img/pbk.jpg">
+            </div>
+        </div>
+        <div class="right">
+            <div class="block bmo">
+                <img src="/img/bmo.jpg">
+                <span>текст</span>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+        <div class="left">
+            <div class="block jake">
+                <span>текст</span>
+                <img src="/img/jake.jpg">
+            </div>
+        </div>
+        <div class="right">
+            <div class="block booblegum">
+                <img src="/img/booblegum.jpg">
+                <span>текст</span>
+            </div>
+        </div>
     </div>
 </div>
+
 
