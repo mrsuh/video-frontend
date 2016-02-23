@@ -1,4 +1,4 @@
-@block-height: 60px;
+@block-height: 80px;
 @block-color: #3366ff;
 @color-bmo: #63BDA4;
 @color-fin: #FFFFFF;
@@ -6,12 +6,14 @@
 @color-bubblegum: #FE66CB;
 @color-pbk: #CD93F9;
 @color-marci: #050A1E;
+
 .nav{
-  padding-top: 100px;
   width: 100%;
-  height: 300px;
-  background-color: inherit;
-  transition: background-color 0.5s ease-in-out;
+  height: 340px;
+  background-color: #0098CC;
+  transition: background-color 0.5s;
+  font-family: myFirstFont;
+  padding-top: 20px;
 
   .line{
     width: 100%;
@@ -19,6 +21,7 @@
     .left{
       display: inline-block;
       width: 50%;
+      transition: width 0.5s ease 0.5s;
       .block{
         background-color: @block-color;
         margin: 10px 10% 10px 30%;
@@ -31,6 +34,7 @@
           float: right;
         }
         span{
+          cursor: default;
           font-size: 14px;
           color: #FFFFFF;
         }
@@ -38,11 +42,14 @@
       .marci{
         background-color: @color-marci;
       }
-      .booblegum{
+      .bubblegum{
         background-color: @color-bubblegum;
       }
       .fin{
         background-color: @color-fin;
+        span{
+          color: #0f0f0f;
+        }
       }
       .pbk{
         background-color: @color-pbk;
@@ -58,6 +65,7 @@
     .right{
       display: inline-block;
       width: 50%;
+      transition: width 0.5s ease 0.5s;
       .block{
         background-color: @block-color;
         margin: 10px 30% 10px 10%;
@@ -70,6 +78,7 @@
           float: left;
         }
         span{
+          cursor: default;
           font-size: 14px;
           color: #FFFFFF;
         }
@@ -77,11 +86,14 @@
       .marci{
         background-color: @color-marci;
       }
-      .booblegum{
+      .bubblegum{
         background-color: @color-bubblegum;
       }
       .fin{
         background-color: @color-fin;
+        span{
+          color: #0f0f0f;
+        }
       }
       .pbk{
         background-color: @color-pbk;
@@ -95,43 +107,89 @@
     }
   }
 }
+
 .nav.marci{
   background-color: @color-marci;
-  opacity: 0.9;
+  opacity: 1;
+}
+.nav.pbk{
+  background-color: @color-pbk;
+  opacity: 1;
+}
+.nav.fin{
+  background-color: @color-fin;
+  opacity: 1;
+}
+.nav.bubblegum{
+  background-color: @color-bubblegum;
+  opacity: 1;
+}
+.nav.jake{
+  background-color: @color-jake;
+  opacity: 1;
+}
+.nav.bmo{
+  background-color: @color-bmo;
+  opacity: 1;
 }
 
 .nav.collapsed{
-  padding-top: 0;
+  position: fixed;
   width: 100%;
-  height: 50px;
-  background-color: #1b6d85;
-  .line{
-    height: 0;
-    .left{
-      .block{
-        height: 0;
-        img{
-          opacity: 0;
-        }
-        span{
-          opacity: 0;
+  height: 40px;
+  background-color: #0098CC;
+  opacity: 1;
+  transition: height 0s ease 0s;
+  .menu{
+    width: 100%;
+    top: -300px;
+    position: fixed;
+    transition: 0.5s ease-in-out 0s;
+  }
+}
+
+.nav.collapsed:hover > .menu{
+  top: 50px;
+}
+
+.nav.collapsed:hover{
+  height: 300px;
+}
+
+.content{
+  padding-top: 40px;
+  height: 900px;
+}
+
+.content.collapsed{
+  padding-top: 380px;
+  height: 900px;
+}
+
+@media all and (max-width: 870px) {
+  .nav {
+    height: @block-height * 6;
+    .line{
+      .left {
+        width: 100%;
+        .block{
+          text-align: left;
+          margin: 0 auto 0 auto;
+          img{
+            float: left;
+          }
         }
       }
-    }
-    .right{
-      .block{
-        height: 0;
-        img{
-          opacity: 0;
-        }
-        span{
-          opacity: 0;
+      .right{
+        width: 100%;
+        .block{
+          text-align: left;
+          margin: 0 auto 0 auto;
+          img{
+            float: left;
+          }
         }
       }
     }
   }
-}
-
-.nav.collapsed:hover + .line + .left + .block{
-  height: @block-height;
 }

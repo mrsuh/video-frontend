@@ -1,44 +1,27 @@
-<div class="nav collapsed" ng-class="{'marci': marci}">
-    <div class="line">
-        <div class="left">
-            <div class="block marci" ng-mouseover="marci=!marci" ng-mouseleave="marci=!marci" ng-init="marci=false">
-                <span>текст</span>
-                <img src="/img/marci.jpg">
-            </div>
-        </div>
-        <div class="right">
-            <div class="block fin">
-                <img src="/img/fin.jpg">
-                <span>текст</span>
-            </div>
+<div class="popular">
+    <div class="width">
+        <div class="block" ng-repeat="popular in populars">
+            <img src="/img/popular.png">
         </div>
     </div>
-    <div class="line">
-        <div class="left">
-            <div class="block pbk">
-                <span>текст</span>
-                <img src="/img/pbk.jpg">
-            </div>
-        </div>
-        <div class="right">
-            <div class="block bmo">
-                <img src="/img/bmo.jpg">
-                <span>текст</span>
-            </div>
+</div>
+<div class="fresh-mu">
+    <h2>
+        Новинки Мультфильмы
+    </h2>
+    <div class="width">
+        <div class="block" ng-repeat="mu in fresh_mu">
+            <img src="/img/mu.png">
         </div>
     </div>
-    <div class="line">
-        <div class="left">
-            <div class="block jake">
-                <span>текст</span>
-                <img src="/img/jake.jpg">
-            </div>
-        </div>
-        <div class="right">
-            <div class="block booblegum">
-                <img src="/img/booblegum.jpg">
-                <span>текст</span>
-            </div>
+</div>
+<div class="fresh-an">
+    <h2>
+        Новинки Аниме
+    </h2>
+    <div class="width">
+        <div class="block" ng-repeat="an in fresh_an">
+            <img src="/img/mu.png">
         </div>
     </div>
 </div>
