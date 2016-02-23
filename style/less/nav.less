@@ -12,7 +12,7 @@
   height: 340px;
   background-color: #0098CC;
   transition: background-color 0.5s;
-  font-family: myFirstFont;
+  font-family: font_common,sans-serif;
   padding-top: 20px;
 
   .line{
@@ -28,6 +28,7 @@
         height: @block-height;
         text-align: right;
         line-height: @block-height;
+        transition: margin 0.5s ease 0.5s;
         img{
           height: @block-height;
           width: auto;
@@ -35,8 +36,9 @@
         }
         span{
           cursor: default;
-          font-size: 14px;
+          font-size: 18px;
           color: #FFFFFF;
+          font-family: font_common,sans-serif;
         }
       }
       .marci{
@@ -72,6 +74,7 @@
         height: @block-height;
         text-align: left;
         line-height: @block-height;
+        transition: margin 0.5s ease 0.5s;
         img{
           height: @block-height;
           width: auto;
@@ -79,8 +82,9 @@
         }
         span{
           cursor: default;
-          font-size: 14px;
+          font-size: 18px;
           color: #FFFFFF;
+          font-family: font_common,sans-serif;
         }
       }
       .marci{
@@ -165,7 +169,22 @@
   padding-top: 380px;
   height: 900px;
 }
-
+@media all and (max-width: 1020px) {
+  .nav {
+    .line{
+      .left {
+        .block{
+          margin: 10px 5% 10px 10%;
+        }
+      }
+      .right {
+        .block{
+          margin: 10px 5% 10px 10%;
+        }
+      }
+    }
+  }
+}
 @media all and (max-width: 870px) {
   .nav {
     height: @block-height * 6;

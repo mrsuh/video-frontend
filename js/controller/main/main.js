@@ -5,6 +5,8 @@ var MainController = function ($rootScope, $scope, $sce, $state, $stateParams, c
         {},
         {},
         {},
+        {},
+        {},
         {}
     ];
 
