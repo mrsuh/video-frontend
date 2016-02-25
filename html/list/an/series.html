@@ -1,0 +1,11 @@
+<div class="poster"></div>
+<h2>Аниме сериалы</h2>
+<div class="series">
+    <div class="line" ng-repeat="s in series">
+        <a href class="block">
+            <img src="{{s.poster}}">
+            <span>{{s.name_ru}}</span>
+            <span>{{s.name_en}}</span>
+        </a>
+    </div>
+</div>

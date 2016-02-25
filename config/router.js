@@ -31,18 +31,88 @@ var router = function ($stateProvider, $urlRouterProvider, $locationProvider) {
             parent  : 'common'
         })
 
-        .state('list', {
-            url        : "/list",
-            controller : 'ListController',
-            templateUrl: "html/list.html",
-            parent  : 'common'
+        .state('list_mu', {
+            url        : "/list/mu",
+            views: {
+                'content@common' : {
+                    templateUrl: 'html/list/layout.html',
+                    controller: 'ListController'
+                }
+            },
+            abstract   : true,
+            parent: 'common'
         })
 
-        .state('film', {
-            url        : "/film/:film_name/:series",
-            controller : 'FilmController',
-            templateUrl: "html/film.html",
-            parent  : 'common'
+        .state('list_mu.series', {
+            url        : "/series",
+            views: {
+                'list@list_mu' : {
+                    controller : 'ListMuSeriesController',
+                    templateUrl: "html/list/mu/series.html"
+                }
+            }
+        })
+
+        .state('list_mu.full', {
+            url        : "/full",
+            views: {
+                'list@list_mu': {
+                    controller : 'ListMuFullController',
+                    templateUrl: "html/list/mu/full.html"
+                }
+            }
+        })
+
+        .state('list_mu.studio', {
+            url        : "/studio",
+            views: {
+                'list@list_mu': {
+                    controller : 'ListMuStudioController',
+                    templateUrl: "html/list/mu/studio.html"
+                }
+            }
+        })
+
+        .state('list_an', {
+            url        : "/list/an",
+            views: {
+                'content@common' : {
+                    templateUrl: 'html/list/layout.html',
+                    controller: 'ListController'
+                }
+            },
+            abstract   : true,
+            parent: 'common'
+        })
+
+        .state('list_an.series', {
+            url        : "/series",
+            views: {
+                'list@list_an' : {
+                    controller : 'ListAnSeriesController',
+                    templateUrl: "html/list/an/series.html"
+                }
+            }
+        })
+
+        .state('list_an.full', {
+            url        : "/full",
+            views: {
+                'list@list_an': {
+                    controller : 'ListAnFullController',
+                    templateUrl: "html/list/an/full.html"
+                }
+            }
+        })
+
+        .state('list_an.studio', {
+            url        : "/studio",
+            views: {
+                'list@list_an': {
+                    controller : 'ListAnStudioController',
+                    templateUrl: "html/list/an/studio.html"
+                }
+            }
         })
 
     ;

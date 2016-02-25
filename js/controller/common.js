@@ -1,4 +1,5 @@
 var CommonController = function ($rootScope, $scope, $state, $stateParams, config) {
+    $rootScope.collapsed = false;
     $scope.menu = {
         sub_1: false,
         sub_2: false

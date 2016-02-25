@@ -1,45 +1,45 @@
-<div class="nav" ng-class="{'marci': marci, 'fin': fin, 'pbk': pbk, 'jake': jake, 'bmo': bmo, 'bubblegum': bubblegum}">
+<div class="nav" ng-class="{'marci': marci, 'fin': fin, 'pbk': pbk, 'jake': jake, 'bmo': bmo, 'bubblegum': bubblegum, 'collapsed': collapsed}">
     <div class="menu">
         <div class="line">
             <div class="left">
-                <div class="block marci" ng-mouseenter="marci=true" ng-mouseleave="marci=false" ng-init="marci=false">
+                <a href ui-sref="list_mu.series" class="block marci" ng-mouseenter="marci=true" ng-mouseleave="marci=false" ng-init="marci=false">
                     <span>Мульт сериалы</span>
                     <img src="/img/marci.jpg">
-                </div>
+                </a>
             </div>
             <div class="right">
-                <div class="block fin" ng-mouseenter="fin=true" ng-mouseleave="fin=false" ng-init="fin=false">
+                <a href ui-sref="list_an.series" class="block fin" ng-mouseenter="fin=true" ng-mouseleave="fin=false" ng-init="fin=false">
                     <img src="/img/fin.jpg">
                     <span>Аниме сериалы</span>
-                </div>
+                </a>
             </div>
         </div>
         <div class="line">
             <div class="left">
-                <div class="block pbk" ng-mouseenter="pbk=true" ng-mouseleave="pbk=false" ng-init="pbk=false">
+                <a href ui-sref="list_mu.full" class="block pbk" ng-mouseenter="pbk=true" ng-mouseleave="pbk=false" ng-init="pbk=false">
                     <span>Полнометражные мультфильмы</span>
                     <img src="/img/pbk.jpg">
-                </div>
+                </a>
             </div>
             <div class="right">
-                <div class="block bmo" ng-mouseenter="bmo=true" ng-mouseleave="bmo=false" ng-init="bmo=false">
+                <a href ui-sref="list_an.full" class="block bmo" ng-mouseenter="bmo=true" ng-mouseleave="bmo=false" ng-init="bmo=false">
                     <img src="/img/bmo.jpg">
                     <span>Полнометражные аниме</span>
-                </div>
+                </a>
             </div>
         </div>
         <div class="line">
             <div class="left">
-                <div class="block jake" ng-mouseenter="jake=true" ng-mouseleave="jake=false" ng-init="jake=false">
+                <a href ui-sref="list_mu.studio" class="block jake" ng-mouseenter="jake=true" ng-mouseleave="jake=false" ng-init="jake=false">
                     <span>Мульт студии</span>
                     <img src="/img/jake.jpg">
-                </div>
+                </a>
             </div>
             <div class="right">
-                <div class="block bubblegum" ng-mouseenter="bubblegum=true" ng-mouseleave="bubblegum=false" ng-init="bubblegum=false">
+                <a href ui-sref="list_an.studio" class="block bubblegum" ng-mouseenter="bubblegum=true" ng-mouseleave="bubblegum=false" ng-init="bubblegum=false">
                     <img src="/img/bubblegum.jpg">
                     <span>Аниме студии</span>
-                </div>
+                </a>
             </div>
         </div>
     </div>
