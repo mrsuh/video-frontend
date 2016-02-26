@@ -3,5 +3,5 @@
 Installation
 ---
 ```
-bash bin/install
+bash bin/deploy
 ```
