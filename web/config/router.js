@@ -24,8 +24,19 @@ var router = function ($stateProvider, $urlRouterProvider, $locationProvider) {
             url        : "",
             views: {
                 'content@common' : {
-                    templateUrl: "html/main.html",
+                    templateUrl: "html/main/main.html",
                     controller : 'MainController'
+                }
+            },
+            parent  : 'common'
+        })
+
+        .state('cartoon', {
+            url        : "/cartoon",
+            views: {
+                'content@common' : {
+                    templateUrl: "html/cartoon/cartoon.html",
+                    controller : 'CartoonController'
                 }
             },
             parent  : 'common'
