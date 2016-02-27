@@ -1,3 +1,4 @@
+@width_fresh_pic: 350px;
 .fresh {
   h2{
     text-align: center;
@@ -19,10 +20,10 @@
       img {
         display: inline-block;
         height: 80px;
-        width: 350px;
+        width: @width_fresh_pic;
         float: left;
       }
-      span:first-of-type{//todo
+      span:first-of-type{
         padding-top: 5px;
       }
       span{
@@ -37,10 +38,30 @@
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
   .fresh {
     .width{
       width: 90%;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .fresh {
+    .width {
+      width: 98%;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .fresh {
+    .width {
+      .block{
+        img{
+          display: none;
+        }
+      }
     }
   }
 }
