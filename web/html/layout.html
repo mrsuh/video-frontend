@@ -1,5 +1,11 @@
-<div class="nav" ng-class="{'marci': marci, 'fin': fin, 'pbk': pbk, 'jake': jake, 'bmo': bmo, 'bubblegum': bubblegum, 'collapsed': collapsed}">
+<div class="nav" ng-class="{'marci': marci, 'fin': fin, 'pbk': pbk, 'jake': jake, 'bmo': bmo, 'bubblegum': bubblegum, 'unwrap': unwrap, 'collapsed': collapsed}">
     <div class="menu">
+        <div class="control">
+            <a href ui-sref="main" class="label">
+                <span>Главная</span>
+            </a>
+            <div class="btn-unwrap" ng-click="unwrap=!unwrap" ng-init="unwrap=false"></div>
+        </div>
         <div class="line">
             <div class="left">
                 <a href ui-sref="list_mu.series" class="block marci" ng-mouseenter="marci=true" ng-mouseleave="marci=false" ng-init="marci=false">

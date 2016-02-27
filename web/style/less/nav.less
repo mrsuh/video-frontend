@@ -1,4 +1,5 @@
-@block-height: 80px;
+@height-block: 80px;
+@height-nav-collapsed: 40px;
 @block-color: #3366ff;
 @color-bmo: #63BDA4;
 @color-fin: #FFFFFF;
@@ -6,14 +7,21 @@
 @color-bubblegum: #FE66CB;
 @color-pbk: #CD93F9;
 @color-marci: #050A1E;
+@color-nav: #0098CC;
 
 .nav{
   width: 100%;
   height: 340px;
-  background-color: #0098CC;
+  background-color: @color-nav;
   transition: background-color 0.5s;
   font-family: font_common,sans-serif;
   padding-top: 20px;
+
+  .menu{
+    .control{
+      display: none;
+    }
+  }
 
   .line{
     width: 100%;
@@ -21,17 +29,16 @@
     .left,  .right{
       display: inline-block;
       width: 50%;
-      transition: width 0.5s ease 0.5s;
       .block{
         background-color: @block-color;
-        height: @block-height;
-        line-height: @block-height;
+        height: @height-block;
+        line-height: @height-block;
         transition: margin 0.5s ease 0.5s;
         text-decoration: none;
         width: 60%;
         display: inline-block;
         img{
-          height: @block-height;
+          height: @height-block;
           width: auto;
         }
         span{
@@ -85,56 +92,72 @@
 
 .nav.marci{
   background-color: @color-marci;
-  opacity: 1;
 }
 .nav.pbk{
   background-color: @color-pbk;
-  opacity: 1;
 }
 .nav.fin{
   background-color: @color-fin;
-  opacity: 1;
 }
 .nav.bubblegum{
   background-color: @color-bubblegum;
-  opacity: 1;
 }
 .nav.jake{
   background-color: @color-jake;
-  opacity: 1;
 }
 .nav.bmo{
   background-color: @color-bmo;
-  opacity: 1;
 }
 
 .nav.collapsed{
   position: fixed;
   width: 100%;
-  height: 40px;
-  background-color: #0098CC;
-  opacity: 1;
-  transition: height 0.5s ease 0s;
+  height: @height-nav-collapsed;
+  transition: all 0.5s;
   padding-top: 0;
   top:0;
-  .menu{
+  .menu {
     width: 100%;
-    top: -300px;
+    top: -450px;
     position: fixed;
     transition: top 0.5s ease 0s;
+    .control{
+      display: block;
+      height: @height-nav-collapsed;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background-color: @color-nav;
+      .label{
+        width: 10%;
+        height: @height-nav-collapsed;
+        background-color: #2e2e2e;
+        float: left;
+        span{
+          text-align: center;
+          line-height: @height-nav-collapsed;
+          color: white;
+        }
+      }
+      .btn-unwrap{
+        width: 10%;
+        height: @height-nav-collapsed;
+        background-color: #2e2e2e;
+        float: right;
+      }
+    }
   }
 }
 
-.nav.collapsed:hover > .menu{
-  top: 40px;
-}
-
-.nav.collapsed:hover{
+.nav.unwrap{
   height: 350px;
+  .menu {
+    top: @height-nav-collapsed;
+  }
 }
 
 .content{
-  padding-top: 40px;
+  padding-top: @height-nav-collapsed;
   height: 900px;
 }
 
@@ -142,6 +165,27 @@
   padding-top: 380px;
   height: 900px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (max-width: 1020px) {
   .nav {
     .line{
@@ -160,9 +204,10 @@
     }
   }
 }
+
 @media all and (max-width: 870px) {
   .nav {
-    height: @block-height * 6;
+    height: @height-block * 6;
     .line{
       .left {
         width: 100%;

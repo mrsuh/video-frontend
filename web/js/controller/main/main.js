@@ -1,5 +1,5 @@
 var MainController = function ($rootScope, $scope, $sce, $state, $stateParams, config) {
-
+    $rootScope.collapsed = false;
     $scope.populars = [
         {},
         {},
