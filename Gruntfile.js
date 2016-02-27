@@ -59,6 +59,22 @@ module.exports = function (grunt) {
         usemin: {
             root: 'dist',
             html: ['dist/index.html']
+        },
+        less: {
+            production: {
+                options: {
+                    paths: ["web/style"]
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'web/style/less/',
+                        src: ['*.less'],
+                        dest: 'web/style/css/',
+                        ext: '.css'
+                    }
+                ]
+            }
         }
     });
 
@@ -69,9 +85,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-filerev');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     grunt.registerTask('build', [
         'clean:before',
+        'less:production',
         'copy',
         'useminPrepare',
         'concat',
