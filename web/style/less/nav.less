@@ -118,7 +118,7 @@
   top:0;
   .menu {
     width: 100%;
-    top: -450px;
+    top: -200%;
     position: fixed;
     transition: top 0.5s ease 0s;
     .control{
@@ -130,6 +130,7 @@
       background-color: @color-nav;
       .label{
         width: 10%;
+        min-width: 100px;
         height: @height-nav-collapsed;
         background-color: #2e2e2e;
         float: left;
@@ -165,8 +166,9 @@
   height: 900px;
 }
 
-@media all and (max-width: 1020px) {
+@media all and (max-width: 1024px) {
   .nav {
+    padding-top: 0;
     .line{
       .left, .right {
         .block{
@@ -178,8 +180,9 @@
   }
 }
 
-@media all and (max-width: 870px) {
+@media all and (max-width: 768px) {
   .nav {
+    padding-top: 0;
     height: @height-block * 6;
     padding-top: 0;
     .line{
@@ -191,6 +194,23 @@
           width: 100%;
           img{
             float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .nav {
+    .line {
+      .left, .right {
+        .block {
+          span{
+            padding-left: 20px;
+          }
+          img {
+          display: none;
           }
         }
       }

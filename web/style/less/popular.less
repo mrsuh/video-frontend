@@ -29,7 +29,7 @@
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
     .popular{
       .width{
         .block{
@@ -40,4 +40,29 @@
         }
       }
     }
+}
+
+@media all and (max-width: 560px) {
+  .popular{
+    .width{
+      .block{
+        width: 50%;
+      }
+      .block{
+        display: none;
+      }
+      .block:nth-child(1){
+        display: inline-block;
+      }
+      .block:nth-child(2){
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 300px) {
+  .popular{
+    display: none;
+  }
 }
