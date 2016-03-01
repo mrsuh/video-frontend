@@ -1,5 +1,5 @@
 @height-block: 80px;
-@height-nav-collapsed: 40px;
+@height-nav-collapsed: 45px;
 @block-color: #3366ff;
 @color-bmo: #63BDA4;
 @color-fin: #FFFFFF;
@@ -133,12 +133,10 @@
         height: @height-nav-collapsed;
         background-color: #2e2e2e;
         float: left;
-        span{
-          text-decoration: none;
-          text-align: center;
-          line-height: @height-nav-collapsed;
-          color: white;
-        }
+        text-decoration: none;
+        text-align: center;
+        line-height: @height-nav-collapsed;
+        color: white;
       }
       .btn-unwrap{
         width: 10%;
@@ -170,13 +168,7 @@
 @media all and (max-width: 1020px) {
   .nav {
     .line{
-      .left {
-        .block{
-          margin: 10px 5% 10px 10%;
-          width: 80%;
-        }
-      }
-      .right {
+      .left, .right {
         .block{
           margin: 10px 5% 10px 10%;
           width: 80%;
@@ -189,19 +181,9 @@
 @media all and (max-width: 870px) {
   .nav {
     height: @height-block * 6;
+    padding-top: 0;
     .line{
-      .left {
-        width: 100%;
-        .block{
-          text-align: left;
-          margin: 0 auto 0 auto;
-          width: 100%;
-          img{
-            float: left;
-          }
-        }
-      }
-      .right{
+      .left, .right {
         width: 100%;
         .block{
           text-align: left;
