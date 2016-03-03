@@ -1,19 +1,47 @@
-.cartoon{
-  width: 100%;
-  video{
-    margin-left: auto;
-    margin-right: auto;
-    width: 640px;
-    height: 365px;
-    display: block;
+.video{
+  width: 90%;
+  font-size: 0;
+  height: 400px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .info{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    img{
+      display: inline-block;
+      width: 340px;
+      height: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
+  .player{
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    video{
+      height: 400px;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
 }
 
-@media all and (max-width: 640px) {
-.cartoon{
-  video{
-    width: 98%;
-    height: auto;
-  }
-}
-}
+
+//@media all and (max-width: 640px) {
+//.cartoon{
+//  video{
+//    width: 98%;
+//    height: auto;
+//  }
+//}
