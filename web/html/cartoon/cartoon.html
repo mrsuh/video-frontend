@@ -1,15 +1,15 @@
-<div class="content">
-
-    <div class="video">
-        <div class="player">
-            <video controls="controls">
-                <source src="/video/video.mp4"/>
-            </video>
-        </div>
-        <div class="info">
-            <img src="/img/poster.jpg">
+<div class="cartoon">
+    <div class="placeholder-player" ng-class="{'full': full}">
+        <div class="player" ng-click="full = !full"></div>
+        <div class="player-info">
+            <div class="poster"></div>
         </div>
     </div>
 
+    <div class="info"></div>
+    <div class="series"></div>
+    <div class="full"></div>
+
 </div>
+
 
