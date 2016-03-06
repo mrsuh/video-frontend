@@ -14,6 +14,7 @@
 @all: @width-player-high + @width-play-info;
 
 .cartoon {
+  font-size: 0;
   padding-top: 45px;
   .placeholder-player {
     margin-top: 10px;
@@ -57,29 +58,58 @@
     }
   }
 
-  .info{
-    margin-top: 10px;
+  .placeholder-info {
     width: @width-player-high + @width-play-info;
-    height: 300px;
-    background-color: #3a3a3a;
+    height: 930px;
     margin-left: auto;
     margin-right: auto;
-  }
+    margin-bottom: 10px;
+    .info {
+      width: @width-player-high;
+      float: left;
 
-  .series{
-    margin-top: 10px;
-    width: @width-player-high + @width-play-info;
-    height: 300px;
-    background-color: #3a3a3a;
-    margin-left: auto;
-    margin-right: auto;
-  }
+      .about {
+        padding: 15px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        width: @width-player-high;
+        height: 120px;
+        background-color: white;
+        font-size: 16px;
+        color: #3a3a3a;
+        font-family: font_text, sans-serif;
+        h2 {
+          font-family: font_text, sans-serif;
+          margin: 0;
+        }
+        span{
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
 
-  .full{
-    width: @width-player-high + @width-play-info;
-    height: 300px;
-    background-color: #3a3a3a;
-    margin: 10px auto 10px auto;
+      .series {
+        margin-top: 10px;
+        width: 100%;
+        height: 300px;
+        background-color: #3a3a3a;
+      }
+
+      .full {
+        width: 100%;
+        height: 300px;
+        background-color: #3a3a3a;
+        margin-top: 10px;
+      }
+    }
+    .popular {
+      margin-top: 10px;
+      float: right;
+      height: 920px;
+      width: @width-play-info;
+      background-color: #2b81af;
+    }
+
   }
 }
 
@@ -92,13 +122,13 @@
       }
     }
 
-    .info{
+    .info {
       width: @width-player-high;
     }
-    .series{
+    .series {
       width: @width-player-high;
     }
-    .full{
+    .full {
       width: @width-player-high;
     }
   }
@@ -121,13 +151,13 @@
       }
     }
 
-    .info{
+    .info {
       width: @width-player-middle;
     }
-    .series{
+    .series {
       width: @width-player-middle;
     }
-    .full{
+    .full {
       width: @width-player-middle;
     }
   }
@@ -149,16 +179,15 @@
         width: @width-player-small;
       }
     }
-    .info{
+    .info {
       width: @width-player-small;
     }
-    .series{
+    .series {
       width: @width-player-small;
     }
-    .full{
+    .full {
       width: @width-player-small;
     }
-
   }
 }
 
@@ -175,17 +204,17 @@
       width: 100%;
       height: @height-player-small;
       .player {
-        width:  100%;
+        width: 100%;
       }
     }
-    .info{
-      width:  100%;
+    .info {
+      width: 100%;
     }
-    .series{
-      width:  100%;
+    .series {
+      width: 100%;
     }
-    .full{
-      width:  100%;
+    .full {
+      width: 100%;
     }
 
   }

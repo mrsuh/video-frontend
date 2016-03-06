@@ -1,15 +1,29 @@
 <div class="cartoon">
+
     <div class="placeholder-player" ng-class="{'full': full}">
-        <div class="player" ng-click="full = !full"></div>
-        <div class="player-info">
-            <div class="poster"></div>
+        <div class="block-player" ng-click="full = !full">
+            <video data-dashjs-player autoplay src="http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd" controls></video>
+        </div>
+        <div class="block-info">
+            <img src="/img/poster.jpg">
         </div>
     </div>
 
-    <div class="info"></div>
-    <div class="series"></div>
-    <div class="full"></div>
-
+    <div class="placeholder-info">
+        <div class="left">
+            <div class="block-about">
+                <h2>Футурама</h2>
+                <span>Сезон 1 Серия 1</span>
+                <span>Космический пилот 3000</span>
+                <span>Space Pilot 3000</span>
+            </div>
+            <div class="block-series"></div>
+            <div class="block-full"></div>
+        </div>
+        <div class="right">
+            <div class="block-popular">
+                <div class="popular"></div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
