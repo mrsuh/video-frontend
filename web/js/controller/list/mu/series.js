@@ -1,20 +1,7 @@
-var ListMuSeriesController = function ($rootScope, $scope, $sce, $state, $stateParams, config) {
-    $scope.series = [
-        {
-            poster: '/img/mu.jpg',
-            name_ru: 'Время приключений',
-            name_en: 'Adventure time',
-            cartoon: 'adventure-time',
-            type: config.CONSTANT.TYPE.CARTOON.SERIAL.NAME
-        },
-        {
-            poster: '/img/mu.jpg',
-            name_ru: 'Футурама',
-            name_en: 'Futurama',
-            cartoon: 'futurama',
-            type: config.CONSTANT.TYPE.CARTOON.SERIAL.NAME
-        }
-    ];
+var ListMuSeriesController = function ($rootScope, $scope, $sce, $state, $stateParams, config, ListResource) {
+    ListResource.get(config.CONSTANT.KIND.CARTOON.MULT, config.CONSTANT.TYPE.CARTOON.SERIES, function(data){
+        $scope.series = data;
+    });
 };
 app.controller("ListMuSeriesController", ListMuSeriesController);
-ListMuSeriesController.$inject = ['$rootScope', '$scope', '$sce', '$state', '$stateParams', 'config'];
+ListMuSeriesController.$inject = ['$rootScope', '$scope', '$sce', '$state', '$stateParams', 'config', 'ListResource'];

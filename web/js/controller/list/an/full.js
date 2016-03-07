@@ -1,14 +1,7 @@
-var ListAnFullController = function ($rootScope, $scope, $sce, $state, $stateParams, config) {
-    $scope.fulls = [];
-    for(var i=1; i<= 10; i++){
-        $scope.fulls.push(
-            {
-                poster: '/img/mu.jpg',
-                name_ru: 'Наруто',
-                name_en: 'Naruto'
-            }
-        );
-    }
+var ListAnFullController = function ($rootScope, $scope, $sce, $state, $stateParams, config, ListResource) {
+    ListResource.get(config.CONSTANT.KIND.CARTOON.ANIM, config.CONSTANT.TYPE.CARTOON.FULL, function(data){
+        $scope.fulls = data;
+    });
 };
 app.controller("ListAnFullController", ListAnFullController);
-ListAnFullController.$inject = ['$rootScope', '$scope', '$sce', '$state', '$stateParams', 'config'];
+ListAnFullController.$inject = ['$rootScope', '$scope', '$sce', '$state', '$stateParams', 'config', 'ListResource'];

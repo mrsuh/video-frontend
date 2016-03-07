@@ -2,7 +2,7 @@
 
     <div class="placeholder-player" ng-class="{'full': full}">
         <div class="block-player">
-            <video controls dash id="videoPlayer" data-url="{{video.url}}"></video>
+            <video controls dash id="videoPlayer" data-url="{{video.url}}" poster="{{video.poster}}"></video>
         </div>
         <div class="block-info">
             <img ng-src="/img/poster.jpg">
@@ -11,22 +11,50 @@
 
     <div class="placeholder-info">
         <div class="left">
+            <div class="block-nav" ng-click="full = !full">
+                <div class="prev"></div>
+                <div class="rand"></div>
+                <div class="next"></div>
+            </div>
             <div class="block-about">
-                <h2>Футурама</h2>
+                <h2>Футурама :: Futurama</h2>
                 <span>Сезон 1 Серия 1</span>
-                <span>Космический пилот 3000</span>
-                <span>Space Pilot 3000</span>
+                <span>Космический пилот 3000 :: Space Pilot 3000</span>
+            </div>
+            <div class="block-description">
+                    <div class="description-left">
+                        <span><span class="header">Жанр: </span>Комедия</span>
+                        <span><span class="header">Премьера: </span>2015</span>
+                        <span><span class="header">Страна: </span>США</span>
+                        <span><span class="header">Количество сезонов: </span>8</span>
+                    </div>
+                    <div class="description-right">
+                        <span><span class="header">Статус: </span>Выходит</span>
+                        <span><span class="header">Рейтинг IMDb: </span>8.8</span>
+                        <span><span class="header">Рейтинг Кинопоиск: </span>7.7</span>
+                    </div>
             </div>
             <div class="block-series">
-                <div class="series" ng-repeat="s in series">
-
+                Cезон
+                <select ng-options="season as season.id for season in seasons"
+                        ng-model="current.season">
+                </select>
+                <hr>
+                <div class="series" ng-repeat="s in current.season.series">
+                    <div class="description">
+                        <span class="number">серия {{s.episode}}</span>
+                        <img class="play" ng-src="/img/play-btn.svg">
+                        <img class="poster" ng-src="/img/mu.jpg">
+                    </div>
                 </div>
             </div>
             <div class="block-full"></div>
         </div>
         <div class="right">
             <div class="block-popular">
-                <div class="popular"></div>
+                <div class="popular" ng-repeat="p in populars">
+                    <img ng-src="/img/mu.jpg">
+                </div>
             </div>
         </div>
     </div>
