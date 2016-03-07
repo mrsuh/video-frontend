@@ -2,5 +2,19 @@ app.constant('config', {
     main_host: '11',
     resource_urls: {
         main: '1111'
+    },
+    CONSTANT: {
+        TYPE:{
+            CARTOON:{
+                SERIAL: {
+                    VAL: 1,
+                    NAME: 'serial'
+                },
+                FULL: {
+                    VAL: 2,
+                    NAME: 'full'
+                }
+            }
+        }
     }
 });
