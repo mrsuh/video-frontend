@@ -1,11 +1,11 @@
 <div class="list-poster"></div>
 <h2>Мульт сериалы</h2>
 <div class="series">
-        <div class="line" ng-repeat="s in series">
-            <a href class="block">
-                <img src="{{s.poster}}">
-                <span>{{s.name_ru}}</span>
-                <span>{{s.name_en}}</span>
-            </a>
-        </div>
+    <div class="line" ng-repeat="s in series">
+        <a href ui-sref="cartoon({cartoon: s.cartoon, type: s.type, season: 1, episode: 1})" class="block">
+            <img ng-src="{{s.poster}}">
+            <span>{{s.name_ru}}</span>
+            <span>{{s.name_en}}</span>
+        </a>
+    </div>
 </div>

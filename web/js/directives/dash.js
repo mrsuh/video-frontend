@@ -1,8 +1,8 @@
 var dash =  function () {
     return function(scope, element, attrs) {
-        var url = "http://core.dev.cdnnow.ru/manifest.mpd";
+        console.info(attrs);
         var player = dashjs.MediaPlayer().create();
-        player.initialize(document.querySelector("#videoPlayer"), url, true);
+        player.initialize(document.querySelector("#videoPlayer"), attrs.url, true);
     };
 };
 app.directive("dash", dash);

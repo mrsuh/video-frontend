@@ -2,10 +2,10 @@
 
     <div class="placeholder-player" ng-class="{'full': full}">
         <div class="block-player">
-            <video controls dash id="videoPlayer"></video>
+            <video controls dash id="videoPlayer" data-url="{{video.url}}"></video>
         </div>
         <div class="block-info">
-            <img src="/img/poster.jpg">
+            <img ng-src="/img/poster.jpg">
         </div>
     </div>
 
@@ -17,7 +17,11 @@
                 <span>Космический пилот 3000</span>
                 <span>Space Pilot 3000</span>
             </div>
-            <div class="block-series"></div>
+            <div class="block-series">
+                <div class="series" ng-repeat="s in series">
+
+                </div>
+            </div>
             <div class="block-full"></div>
         </div>
         <div class="right">

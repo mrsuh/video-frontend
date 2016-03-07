@@ -32,7 +32,7 @@ var router = function ($stateProvider, $urlRouterProvider, $locationProvider) {
         })
 
         .state('cartoon', {
-            url        : "/cartoon",
+            url        : "/cartoon/:cartoon/:type/:season/:episode",
             views: {
                 'content@common' : {
                     templateUrl: "html/cartoon/cartoon.html",
