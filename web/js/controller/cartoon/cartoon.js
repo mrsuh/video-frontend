@@ -2,12 +2,12 @@ var CartoonController = function ($rootScope, $scope, $sce, $state, $stateParams
     $rootScope.collapsed = true;
 
     $scope.current = {};
-    CartoonResource.get($stateParams.cartoon, function(data){
+    CartoonResource.get($stateParams.cartoon, function (data) {
         $scope.cartoon = data;
         $scope.current.season = $scope.cartoon.seasons[0];
     });
 
-    CartoonResource.getVideo($stateParams.cartoon, $stateParams.type, $stateParams.season, $stateParams.episode, function(data){
+    CartoonResource.getVideo($stateParams.cartoon, $stateParams.type, $stateParams.season, $stateParams.episode, function (data) {
         $scope.video = data;
     });
 

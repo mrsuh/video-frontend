@@ -1,4 +1,5 @@
-<div class="nav" ng-class="{'marci': marci, 'fin': fin, 'pbk': pbk, 'jake': jake, 'bmo': bmo, 'bubblegum': bubblegum, 'unwrap': unwrap, 'collapsed': collapsed}">
+<div class="nav"
+     ng-class="{'marci': marci, 'fin': fin, 'pbk': pbk, 'jake': jake, 'bmo': bmo, 'bubblegum': bubblegum, 'unwrap': unwrap, 'collapsed': collapsed}">
     <div class="menu">
         <div class="control">
             <div ui-sref="main" class="label-block">
@@ -12,13 +13,15 @@
         </div>
         <div class="line">
             <div class="left">
-                <a href ui-sref="list_mu.series" class="block marci" ng-mouseenter="marci=true" ng-mouseleave="marci=false" ng-init="marci=false" ng-click="unwrap=false">
+                <a href ui-sref="list_mu.series" class="block marci" ng-mouseenter="marci=true"
+                   ng-mouseleave="marci=false" ng-init="marci=false" ng-click="unwrap=false">
                     <span>Мульт сериалы</span>
                     <img src="/img/marci.jpg">
                 </a>
             </div>
             <div class="right">
-                <a href ui-sref="list_an.series" class="block fin" ng-mouseenter="fin=true" ng-mouseleave="fin=false" ng-init="fin=false" ng-click="unwrap=false">
+                <a href ui-sref="list_an.series" class="block fin" ng-mouseenter="fin=true" ng-mouseleave="fin=false"
+                   ng-init="fin=false" ng-click="unwrap=false">
                     <img src="/img/fin.jpg">
                     <span>Аниме сериалы</span>
                 </a>
@@ -26,13 +29,15 @@
         </div>
         <div class="line">
             <div class="left">
-                <a href ui-sref="list_mu.full" class="block pbk" ng-mouseenter="pbk=true" ng-mouseleave="pbk=false" ng-init="pbk=false" ng-click="unwrap=false">
+                <a href ui-sref="list_mu.full" class="block pbk" ng-mouseenter="pbk=true" ng-mouseleave="pbk=false"
+                   ng-init="pbk=false" ng-click="unwrap=false">
                     <span>Полнометражные мультфильмы</span>
                     <img src="/img/pbk.jpg">
                 </a>
             </div>
             <div class="right">
-                <a href ui-sref="list_an.full" class="block bmo" ng-mouseenter="bmo=true" ng-mouseleave="bmo=false" ng-init="bmo=false" ng-click="unwrap=false">
+                <a href ui-sref="list_an.full" class="block bmo" ng-mouseenter="bmo=true" ng-mouseleave="bmo=false"
+                   ng-init="bmo=false" ng-click="unwrap=false">
                     <img src="/img/bmo.jpg">
                     <span>Полнометражные аниме</span>
                 </a>
@@ -40,13 +45,15 @@
         </div>
         <div class="line">
             <div class="left">
-                <a href ui-sref="list_mu.studio" class="block jake" ng-mouseenter="jake=true" ng-mouseleave="jake=false" ng-init="jake=false" ng-click="unwrap=false">
+                <a href ui-sref="list_mu.studio" class="block jake" ng-mouseenter="jake=true" ng-mouseleave="jake=false"
+                   ng-init="jake=false" ng-click="unwrap=false">
                     <span>Мульт студии</span>
                     <img src="/img/jake.jpg">
                 </a>
             </div>
             <div class="right">
-                <a href ui-sref="list_an.studio" class="block bubblegum" ng-mouseenter="bubblegum=true" ng-mouseleave="bubblegum=false" ng-init="bubblegum=false" ng-click="unwrap=false">
+                <a href ui-sref="list_an.studio" class="block bubblegum" ng-mouseenter="bubblegum=true"
+                   ng-mouseleave="bubblegum=false" ng-init="bubblegum=false" ng-click="unwrap=false">
                     <img src="/img/bubblegum.jpg">
                     <span>Аниме студии</span>
                 </a>

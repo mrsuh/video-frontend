@@ -7,18 +7,16 @@ var CommonController = function ($rootScope, $scope, config) {
 
     $rootScope.CONSTANT = config.CONSTANT;
 
-    $scope.closeMenu = function()
-    {
-        for(var index in $scope.menu){
-            if(!$scope.menu.hasOwnProperty(index)){
+    $scope.closeMenu = function () {
+        for (var index in $scope.menu) {
+            if (!$scope.menu.hasOwnProperty(index)) {
                 continue;
             }
             $scope.menu[index] = false;
         }
     };
 
-    $scope.changeMenu = function(sub_menu)
-    {
+    $scope.changeMenu = function (sub_menu) {
         $scope.closeMenu();
         $scope.menu[sub_menu] = true;
     };

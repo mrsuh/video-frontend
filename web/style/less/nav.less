@@ -9,27 +9,27 @@
 @color-marci: #050A1E;
 @color-nav: #0098CC;
 
-.nav{
+.nav {
   width: 100%;
   height: 340px;
   background-color: @color-nav;
   transition: background-color 0.5s;
-  font-family: font_common,sans-serif;
+  font-family: font_common, sans-serif;
   padding-top: 20px;
 
-  .menu{
-    .control{
+  .menu {
+    .control {
       display: none;
     }
   }
 
-  .line{
+  .line {
     width: 100%;
     font-size: 0;
-    .left,  .right{
+    .left, .right {
       display: inline-block;
       width: 50%;
-      .block{
+      .block {
         background-color: @block-color;
         height: @height-block;
         line-height: @height-block;
@@ -37,52 +37,52 @@
         text-decoration: none;
         width: 60%;
         display: inline-block;
-        img{
+        img {
           height: @height-block;
           width: auto;
         }
-        span{
+        span {
           font-size: 18px;
           color: #FFFFFF;
-          font-family: font_common,sans-serif;
+          font-family: font_common, sans-serif;
         }
       }
-      .marci{
+      .marci {
         background-color: @color-marci;
       }
-      .bubblegum{
+      .bubblegum {
         background-color: @color-bubblegum;
       }
-      .fin{
+      .fin {
         background-color: @color-fin;
-        span{
+        span {
           color: #0f0f0f;
         }
       }
-      .pbk{
+      .pbk {
         background-color: @color-pbk;
       }
-      .jake{
+      .jake {
         background-color: @color-jake;
       }
-      .bmo{
+      .bmo {
         background-color: @color-bmo;
       }
     }
-    .left{
-      .block{
+    .left {
+      .block {
         text-align: right;
         margin: 10px 10% 10px 30%;
-        img{
+        img {
           float: right;
         }
       }
     }
-    .right{
-      .block{
+    .right {
+      .block {
         text-align: left;
         margin: 10px 30% 10px 10%;
-        img{
+        img {
           float: left;
         }
       }
@@ -90,39 +90,44 @@
   }
 }
 
-.nav.marci{
+.nav.marci {
   background-color: @color-marci;
 }
-.nav.pbk{
+
+.nav.pbk {
   background-color: @color-pbk;
 }
-.nav.fin{
+
+.nav.fin {
   background-color: @color-fin;
 }
-.nav.bubblegum{
+
+.nav.bubblegum {
   background-color: @color-bubblegum;
 }
-.nav.jake{
+
+.nav.jake {
   background-color: @color-jake;
 }
-.nav.bmo{
+
+.nav.bmo {
   background-color: @color-bmo;
 }
 
-.nav.collapsed{
+.nav.collapsed {
   z-index: 2;
   position: fixed;
   width: 100%;
   height: @height-nav-collapsed;
   transition: all 0.5s;
   padding-top: 0;
-  top:0;
+  top: 0;
   .menu {
     width: 100%;
     top: -200%;
     position: fixed;
     transition: top 0.5s ease 0s;
-    .control{
+    .control {
       display: block;
       height: @height-nav-collapsed;
       width: 100%;
@@ -174,20 +179,20 @@
   }
 }
 
-.nav.unwrap{
+.nav.unwrap {
   height: 350px;
   .menu {
     top: @height-nav-collapsed;
   }
 }
 
-.content{
+.content {
   z-index: 1;
   padding-top: @height-nav-collapsed;
   height: 900px;
 }
 
-.content.collapsed{
+.content.collapsed {
   padding-top: 380px;
   height: 900px;
 }
@@ -195,9 +200,9 @@
 @media all and (max-width: 1024px) {
   .nav {
     padding-top: 0;
-    .line{
+    .line {
       .left, .right {
-        .block{
+        .block {
           margin: 10px 5% 10px 10%;
           width: 80%;
         }
@@ -233,8 +238,8 @@
     .line {
       .left, .right {
         .block {
-         height: 45px;
-         line-height: 45px;
+          height: 45px;
+          line-height: 45px;
           padding-left: 15px;
           img {
             display: none;
@@ -243,7 +248,8 @@
       }
     }
   }
-  .nav.unwrap{
+
+  .nav.unwrap {
     height: 45px * 6;
   }
 }
@@ -253,11 +259,11 @@
     .line {
       .left, .right {
         .block {
-          span{
+          span {
             padding-left: 20px;
           }
           img {
-          display: none;
+            display: none;
           }
         }
       }

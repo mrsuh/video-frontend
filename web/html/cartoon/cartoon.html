@@ -26,17 +26,17 @@
                 <span>Космический пилот 3000 :: Space Pilot 3000</span>
             </div>
             <div class="block-description">
-                    <div class="description-left">
-                        <span><span class="header">Жанр: </span>{{cartoon.genre}}</span>
-                        <span><span class="header">Премьера: </span>{{cartoon.premiere}}</span>
-                        <span><span class="header">Страна: </span>{{cartoon.country}}</span>
-                        <span><span class="header">Количество сезонов: </span>{{cartoon.season_count}}</span>
-                    </div>
-                    <div class="description-right">
-                        <span><span class="header">Статус: </span>{{cartoon.status}}</span>
-                        <span><span class="header">Рейтинг IMDb: </span>{{cartoon.rating_imdb}}</span>
-                        <span><span class="header">Рейтинг Кинопоиск: </span>{{cartoon.rating_kinopoisk}}</span>
-                    </div>
+                <div class="description-left">
+                    <span><span class="header">Жанр: </span>{{cartoon.genre}}</span>
+                    <span><span class="header">Премьера: </span>{{cartoon.premiere}}</span>
+                    <span><span class="header">Страна: </span>{{cartoon.country}}</span>
+                    <span><span class="header">Количество сезонов: </span>{{cartoon.season_count}}</span>
+                </div>
+                <div class="description-right">
+                    <span><span class="header">Статус: </span>{{cartoon.status}}</span>
+                    <span><span class="header">Рейтинг IMDb: </span>{{cartoon.rating_imdb}}</span>
+                    <span><span class="header">Рейтинг Кинопоиск: </span>{{cartoon.rating_kinopoisk}}</span>
+                </div>
             </div>
             <div class="block-series">
                 Cезон
@@ -44,7 +44,9 @@
                         ng-model="current.season">
                 </select>
                 <hr>
-                <a href ui-sref="cartoon({cartoon: cartoon.cartoon, type: CONSTANT.TYPE.CARTOON.SERIES, season: current.season.id, episode: s.episode})" class="series" ng-repeat="s in current.season.series">
+                <a href
+                   ui-sref="cartoon({cartoon: cartoon.cartoon, type: CONSTANT.TYPE.CARTOON.SERIES, season: current.season.id, episode: s.episode})"
+                   class="series" ng-repeat="s in current.season.series">
                     <div class="description">
                         <span class="number">серия {{s.episode}}</span>
                         <img class="play" ng-src="/img/play-btn.svg">

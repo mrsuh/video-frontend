@@ -12,21 +12,25 @@
     <h2>
         Новинки Мультфильмы
     </h2>
+
     <div class="width">
-            <a href ui-sref="cartoon({cartoon: mu.cartoon, type: mu.type, season: mu.season, episode: mu.episode})" class="block" ng-repeat="mu in fresh_mu">
-                <img ng-src="{{mu.poster}}">
-                <span class="name_ru">{{mu.name_ru}}</span><br>
-                <span class="name_en">{{mu.name_en}}</span><br>
-                <span class="name">Сезон {{mu.season}} серия {{mu.episode}}</span>
-            </a>
+        <a href ui-sref="cartoon({cartoon: mu.cartoon, type: mu.type, season: mu.season, episode: mu.episode})"
+           class="block" ng-repeat="mu in fresh_mu">
+            <img ng-src="{{mu.poster}}">
+            <span class="name_ru">{{mu.name_ru}}</span><br>
+            <span class="name_en">{{mu.name_en}}</span><br>
+            <span class="name">Сезон {{mu.season}} серия {{mu.episode}}</span>
+        </a>
     </div>
 </div>
 <div class="fresh an">
     <h2>
         Новинки Аниме
     </h2>
+
     <div class="width">
-        <a href ui-sref="cartoon({cartoon: an.cartoon, type: an.type, season: an.season, episode: an.episode})" class="block" ng-repeat="an in fresh_an">
+        <a href ui-sref="cartoon({cartoon: an.cartoon, type: an.type, season: an.season, episode: an.episode})"
+           class="block" ng-repeat="an in fresh_an">
             <img ng-src="{{an.poster}}">
             <span class="name_ru">{{an.name_ru}}</span><br>
             <span class="name_en">{{an.name_en}}</span><br>

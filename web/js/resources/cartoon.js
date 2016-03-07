@@ -1,8 +1,6 @@
 var CartoonResource = function ($resource, $http, config) {
     var resource = $resource(config.resource_host + config.resource_urls.list,
-        {
-
-        },
+        {},
         {
             getArray: {
                 method: 'GET',
@@ -23,7 +21,7 @@ var CartoonResource = function ($resource, $http, config) {
             }
 
             var seasons = [];
-            for(var s = 1; s<=10; s++){
+            for (var s = 1; s <= 10; s++) {
                 seasons.push({
                     id: s,
                     series: series
@@ -43,7 +41,7 @@ var CartoonResource = function ($resource, $http, config) {
                 seasons: seasons
             });
         },
-        getVideo: function(cartoon, type, season, episode, callback){
+        getVideo: function (cartoon, type, season, episode, callback) {
             callback({
                 url: 'http://core.dev.cdnnow.ru/manifest.mpd',
                 poster: '/img/mu.jpg'
