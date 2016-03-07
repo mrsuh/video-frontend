@@ -1,21 +1,24 @@
 <div class="popular">
     <div class="width">
-        <div class="block" ng-repeat="popular in populars">
-            <img src="/img/popular.jpg">
+        <div class="block" ng-repeat="po in populars">
+            <a href ui-sref="cartoon({cartoon: po.cartoon, type: po.type, season: po.season, episode: po.episode})">
+                <img src="{{po.poster}}">
+            </a>
         </div>
     </div>
 </div>
+
 <div class="fresh mu">
     <h2>
         Новинки Мультфильмы
     </h2>
     <div class="width">
-        <a href ui-sref="cartoon" class="block" ng-repeat="mu in fresh_mu">
-            <img ng-src="/img/mu.jpg">
-            <span class="name_ru">Время приключений</span><br>
-            <span class="name_en">Adventure Time</span><br>
-            <span class="name">Сезон 1 серия 2</span>
-        </a>
+            <a href ui-sref="cartoon({cartoon: mu.cartoon, type: mu.type, season: mu.season, episode: mu.episode})" class="block" ng-repeat="mu in fresh_mu">
+                <img ng-src="{{mu.poster}}">
+                <span class="name_ru">{{mu.name_ru}}</span><br>
+                <span class="name_en">{{mu.name_en}}</span><br>
+                <span class="name">Сезон {{mu.season}} серия {{mu.episode}}</span>
+            </a>
     </div>
 </div>
 <div class="fresh an">
@@ -23,12 +26,12 @@
         Новинки Аниме
     </h2>
     <div class="width">
-        <div class="block" ng-repeat="an in fresh_an">
-            <img ng-src="/img/mu.jpg">
-            <span class="name_ru">Наруто</span><br>
-            <span class="name_en">Naruto</span><br>
-            <span class="name">Сезон 38 серия 42</span>
-        </div>
+        <a href ui-sref="cartoon({cartoon: an.cartoon, type: an.type, season: an.season, episode: an.episode})" class="block" ng-repeat="an in fresh_an">
+            <img ng-src="{{an.poster}}">
+            <span class="name_ru">{{an.name_ru}}</span><br>
+            <span class="name_en">{{an.name_en}}</span><br>
+            <span class="name">Сезон {{an.season}} серия {{an.episode}}</span>
+        </a>
     </div>
 </div>
 

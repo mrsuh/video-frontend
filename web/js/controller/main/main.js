@@ -1,27 +1,11 @@
-var MainController = function ($rootScope, $scope, $sce, $state, $stateParams, config) {
+var MainController = function ($rootScope, $scope, $sce, MainResource) {
     $rootScope.collapsed = false;
-    $scope.populars = [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-    ];
 
-    $scope.fresh_mu = [
-        {},
-        {},
-        {}
-    ];
-
-    $scope.fresh_an = [
-        {},
-        {},
-        {}
-    ];
-
+    MainResource.get(function(data){
+        $scope.populars = data.populars;
+        $scope.fresh_mu = data.fresh_mu;
+        $scope.fresh_an = data.fresh_an;
+    });
 };
 app.controller("MainController", MainController);
-MainController.$inject = ['$rootScope', '$scope', '$sce', '$state', '$stateParams', 'config'];
+MainController.$inject = ['$rootScope', '$scope', '$sce', 'MainResource'];

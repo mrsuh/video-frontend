@@ -21,36 +21,36 @@
                 </div>
             </div>
             <div class="block-about">
-                <h2>Футурама :: Futurama</h2>
+                <h2>{{cartoon.name_ru}} :: {{cartoon.name_en}}</h2>
                 <span>Сезон 1 Серия 1</span>
                 <span>Космический пилот 3000 :: Space Pilot 3000</span>
             </div>
             <div class="block-description">
                     <div class="description-left">
-                        <span><span class="header">Жанр: </span>Комедия</span>
-                        <span><span class="header">Премьера: </span>2015</span>
-                        <span><span class="header">Страна: </span>США</span>
-                        <span><span class="header">Количество сезонов: </span>8</span>
+                        <span><span class="header">Жанр: </span>{{cartoon.genre}}</span>
+                        <span><span class="header">Премьера: </span>{{cartoon.premiere}}</span>
+                        <span><span class="header">Страна: </span>{{cartoon.country}}</span>
+                        <span><span class="header">Количество сезонов: </span>{{cartoon.season_count}}</span>
                     </div>
                     <div class="description-right">
-                        <span><span class="header">Статус: </span>Выходит</span>
-                        <span><span class="header">Рейтинг IMDb: </span>8.8</span>
-                        <span><span class="header">Рейтинг Кинопоиск: </span>7.7</span>
+                        <span><span class="header">Статус: </span>{{cartoon.status}}</span>
+                        <span><span class="header">Рейтинг IMDb: </span>{{cartoon.rating_imdb}}</span>
+                        <span><span class="header">Рейтинг Кинопоиск: </span>{{cartoon.rating_kinopoisk}}</span>
                     </div>
             </div>
             <div class="block-series">
                 Cезон
-                <select ng-options="season as season.id for season in seasons"
+                <select ng-options="season as season.id for season in cartoon.seasons"
                         ng-model="current.season">
                 </select>
                 <hr>
-                <div class="series" ng-repeat="s in current.season.series">
+                <a href ui-sref="cartoon({cartoon: cartoon.cartoon, type: CONSTANT.TYPE.CARTOON.SERIES, season: current.season.id, episode: s.episode})" class="series" ng-repeat="s in current.season.series">
                     <div class="description">
                         <span class="number">серия {{s.episode}}</span>
                         <img class="play" ng-src="/img/play-btn.svg">
                         <img class="poster" ng-src="/img/mu.jpg">
                     </div>
-                </div>
+                </a>
             </div>
             <div class="block-full"></div>
         </div>

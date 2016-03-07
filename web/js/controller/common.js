@@ -1,9 +1,11 @@
-var CommonController = function ($rootScope, $scope, $state, $stateParams, config) {
+var CommonController = function ($rootScope, $scope, config) {
     $rootScope.collapsed = false;
     $scope.menu = {
         sub_1: false,
         sub_2: false
     };
+
+    $rootScope.CONSTANT = config.CONSTANT;
 
     $scope.closeMenu = function()
     {
@@ -23,4 +25,4 @@ var CommonController = function ($rootScope, $scope, $state, $stateParams, confi
 };
 
 app.controller("CommonController", CommonController);
-CommonController.$inject = ['$rootScope', '$scope', '$state', '$stateParams', 'config'];
+CommonController.$inject = ['$rootScope', '$scope', 'config'];
