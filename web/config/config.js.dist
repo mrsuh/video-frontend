@@ -1,19 +1,20 @@
 app.constant('config', {
-    main_host: '11',
+    resource_host: 'video-backend.local',
     resource_urls: {
-        main: '1111'
+        list: 'list/:kind:/:type'
     },
     CONSTANT: {
         TYPE:{
             CARTOON:{
-                SERIAL: {
-                    VAL: 1,
-                    NAME: 'serial'
-                },
-                FULL: {
-                    VAL: 2,
-                    NAME: 'full'
-                }
+                SERIES: 'series',
+                FULL: 'full',
+                STUDIO: 'studio'
+            }
+        },
+        KIND: {
+            CARTOON:{
+                MULT: 'mu',
+                ANIM: 'an'
             }
         }
     }
