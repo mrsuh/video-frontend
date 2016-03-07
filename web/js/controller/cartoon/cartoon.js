@@ -1,6 +1,10 @@
 var CartoonController = function ($rootScope, $scope, $sce, $state, $stateParams, config) {
     $rootScope.collapsed = true;
 
+    $scope.current = {
+        season: null
+    };
+
     var initPlaylist = function () {
         $stateParams.cartoon;
         $stateParams.type;
@@ -30,6 +34,8 @@ var CartoonController = function ($rootScope, $scope, $sce, $state, $stateParams
             series: series
         })
     }
+
+    $scope.current.season = $scope.seasons[0];
 
     $scope.populars = [];
     for (var i = 1; i <= 6; i++) {

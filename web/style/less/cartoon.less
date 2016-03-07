@@ -79,19 +79,35 @@
         height: 45px;
         margin-bottom: 10px;
         background-color: white;
-        .prev {
+        .prev, .next {
           height: 100%;
           width: 100px;
-          float: left;
           background-color: #2e2e2e;
           display: inline-block;
+          opacity: .9;
         }
         .next {
-          height: 100%;
-          width: 100px;
           float: right;
-          background-color: #2e2e2e;
-          display: inline-block;
+          .triangle{
+            border: 16px solid transparent;
+            border-left: 16px solid white;
+            display: inline-block;
+            margin-left: 45px;
+            margin-top: 7px;
+          }
+        }
+        .prev{
+          float: left;
+          .triangle{
+            border: 16px solid transparent;
+            border-right: 16px solid white;
+            display: inline-block;
+            margin-left: 22px;
+            margin-top: 7px;
+          }
+        }
+        .prev:hover, .next:hover{
+          opacity: 1;
         }
       }
       .block-about {
@@ -317,6 +333,25 @@
     }
     .placeholder-info {
       width: @width-player-small;
+      .left {
+        .block-series {
+          .series {
+            height: 30px;
+            .description {
+              height: 100%;
+              img.poster {
+                display: none;
+              }
+            }
+            .description:hover > img.play {
+              display: block;
+            }
+            .description:hover{
+              border-color: #0098cc;
+            }
+          }
+        }
+      }
     }
   }
 }
