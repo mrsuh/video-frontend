@@ -2,7 +2,7 @@
     <div class="width">
         <div class="block" ng-repeat="po in populars">
             <a href ui-sref="cartoon({cartoon: po.cartoon, type: po.type, season: po.season, episode: po.episode})">
-                <img src="{{po.poster}}">
+                <img ng-src="{{po.poster}}">
             </a>
         </div>
     </div>

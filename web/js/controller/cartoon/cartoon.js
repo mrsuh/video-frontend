@@ -7,8 +7,9 @@ var CartoonController = function ($rootScope, $scope, $sce, $state, $stateParams
         $scope.current.season = $scope.cartoon.seasons[0];
     });
 
-    CartoonResource.getVideo($stateParams.cartoon, $stateParams.type, $stateParams.season, $stateParams.episode, function (data) {
+    CartoonResource.getPlaylist($stateParams.cartoon, $stateParams.type, $stateParams.season, $stateParams.episode, function (data) {
         $scope.video = data;
+        console.info(data);
     });
 
     $scope.populars = [];

@@ -1,7 +1,9 @@
 app.constant('config', {
-    resource_host: 'video-backend.local',
+    resource_host: 'http://video-backend.local/app_dev.php/',
     resource_urls: {
-        list: 'list/:kind:/:type'
+        list: 'list',
+        main: 'main',
+        cartoon: 'cartoon/:playlist'
     },
     CONSTANT: {
         TYPE:{
