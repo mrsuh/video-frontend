@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+    nginx:
+        image: nginx:latest
+        ports:
+            - 9080:80
+        volumes:
+          - app-volume:/usr/share/nginx/html
+
+    app:
+        build: ./
+        volumes:
+          - app-volume:/app/dist
+
+volumes:
+    app-volume:

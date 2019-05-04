@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -xe
+
 cd "$( cd `dirname $0` && pwd )/../web"
 npm install
 
